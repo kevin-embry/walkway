@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>marathon form</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="marathon.css">
+<script>
+	expireDate = new Date
+	expireDate.setMonth(expireDate.getMonth()+6)
+	
+	function setCookie()
+	{
+		var name = document.getElementById("fname").value;
+		document.cookie = "Name=" + name.replace(/[\r\n]+/g, '_') + "; expires=" + expireDate.toGMTString()
+		alert(document.cookie);
+		}
+	
+function validateform(){
+
+	var x = document.forms["marathonform"]["fname"].value;
+	if (x == null || x == "") {
+		alert("First Name must be filled out");
+		return false;
+	}
+	var x = document.forms["marathonform"]["lname"].value;
+	if (x == null || x == "") {
+		alert("Last Name must be filled out");
+		return false;
+	}
+	var x = document.forms["marathonform"]["email"].value;
+	if (x == null || x == "") {
+		alert("Email Address must be filled out");
+		return false;
+	}
+	var x = document.forms["marathonform"]["address"].value;
+	if (x == null || x == "") {
+		alert("Street Address must be filled out");
+		return false;
+	}
+	var x = document.forms["marathonform"]["city"].value;
+	if (x == null || x == "") {
+		alert("City Name must be filled out");
+		return false;
+	}
+	var x = document.forms["marathonform"]["state"].value;
+	if (x == null || x == "") {
+		alert("State Name must be filled out");
+		return false;
+	}
+	var x = document.forms["marathonform"]["zip"].value;
+	if (x == null || x == "") {
+		alert("Zip Code must be filled out");
+		return false;
+	}
+	
+}
+window.onload = getCookie;
+	function getCookie(){
+	if (document.cookie !="")
+	{
+		var name = document.cookie.split("=")[1];
+		window.alert("Welcome back "+name);
+		}
+	}
+	
+</script>
+</head>
+<body>
+<header>
+    <img id="headerimg" src="images/header.jpg">
+    <img id="header_right" src="images/header_grab.JPG">
+</header>
+<div class="news">
+    <h1 style="text-align: center">Marathon Entry Form</h1>
+</div>
+
+<aside>
+    <h2>MENU</h2>
+    <nav id="nav_list">
+        <ul>
+            <li><a href="index.html">MAIN</a></li>
+			<li><a href="history.html">HISTORY</a></li>
+            <li><a href="photogallery.html">PHOTOS</a></li>
+            <li><a href="walkwayevents.html">EVENTS</a></li>
+            <li><a href="support.html">SUPPORT</a></li>
+            <li><a href="weather.html">WEATHER</a></li>
+        </ul>
+       
+        <h2>VENDORS</h2>
+        <ul>
+            <li><a href="walkway-1.xml">FOOD</a></li>
+           
+        </ul>
+        
+        <h2>VISITING THE WALKWAY</h2>
+        <ul>
+            <li><a href="directions.html">DIRECTIONS</a></li>
+            <li><a href="#" onclick="getHours()">HOURS</a></li>
+            <li><a href="history.html">HISTORY</a></li>
+           
+        </ul>
+    </nav>
+</aside>
+<div id="main">
+<br><br>
+<form name="marathonform" method="post" action="marathoninsert.asp" onsubmit="return validateform()">
+First Name<br>
+<input type="text" id="fname" name="fname"><br>
+Last Name<br>
+<input type="text" name="lname"><br>
+Email Address<br>
+<input type="text" name="email"><br>
+Home Address<br>
+<input type="text" name="address"><br>
+City<br>
+<input type="text" name="city"></br>
+State<br>
+<input type="text" name="state"><br>
+Zip Code<br>
+<input type="text" name="zip"><br>
+<br>
+<input type="button" value="Cookie" onClick="setCookie()"><br>
+<input type="submit" value="submit">
+</form>
+</div>
+
+
+<footer>
+    <p style="padding-top: 0px">&copy;2015 Walkway Over The Hudson All Rights Reserved</p>
+    <img src="images/small_logo.jpg" name="botlogo" width="135px" height="70px">
+</footer>
+
+<script>
+
+    function getHours()
+    {
+        window.alert("Park Hours: Sunrise to Sunset.");
+    }
+</script>
+
+</body>
+</html>

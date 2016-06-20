@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Current Weather</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="weather.css">
+</head>
+<body>
+<header>
+    <img id="headerimg" src="images/header.jpg">
+    <img id="header_right" src="images/header_grab.JPG">
+
+</header>
+
+<aside>
+    <h2>MENU</h2>
+    <nav id="nav_list">
+        <ul>
+            <li><a href="index.html">MAIN</a></li>
+			<li><a href="history.html">HISTORY</a></li>
+            <li><a href="photogallery.html">PHOTOS</a></li>
+            <li><a href="walkwayevents.html">EVENTS</a></li>
+            <li><a href="support.html">SUPPORT</a></li>
+            <li><a href="#">WEATHER</a></li>
+        </ul>
+       
+        <h2>VENDORS</h2>
+        <ul>
+            <li><a href="walkway-1.xml">FOOD</a></li>
+
+        </ul>
+        
+        <h2>VISITING THE WALKWAY</h2>
+        <ul>
+            <li><a href="directions.html">DIRECTIONS</a></li>
+            <li><a href="#" onclick="getHours()">HOURS</a></li>
+
+        </ul>
+    </nav>
+</aside>
+<main>
+ <div id="true">
+        <iframe style="margin: 42px 45px;" name="iframea" src="https://weather.com/weather/today/l/12601:4:US"width="700px" height="700px"></iframe>
+
+    </div>
+</main>
+
+
+<footer>
+    <p style="padding-top: 0px">&copy;2015 Walkway Over The Hudson All Rights Reserved</p>
+    <img src="images/small_logo.jpg" name="botlogo" width="135px" height="70px">
+</footer>
+
+<script>
+
+    function getHours()
+    {
+        window.alert("Park Hours: Sunrise to Sunset.");
+    }
+</script>
+</body>
+</html>

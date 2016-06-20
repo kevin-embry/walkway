@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="menu.xsl"?>
+<!DOCTYPE menu [
+<!ELEMENT menu (food,food,food,merchandise,merchandise,merchandise,rental,rental)>
+<!ELEMENT food (name,price,description)>
+<!ELEMENT merchandise (name,price,description)>
+<!ELEMENT rental (name,price,description)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+]>
+<menu>
+<food>
+  <name>Water</name>
+  <price>$3</price>
+  <description>Fresh ice cold bottle of water.</description>
+</food>
+<food>
+  <name>Hot Dog</name>
+  <price>$4</price>
+  <description>Grilled hotdog in a roll.</description>
+</food>
+<food>
+  <name>Hamburger</name>
+  <price>$6.95</price>
+  <description>Grilled burger in a bun, can add cheese for an extra $1.</description>
+</food>
+<merchandise>
+  <name>Walkway Sweater</name>
+  <price>$20</price>
+  <description>100% cotton sweater with walkway logo.</description>
+</merchandise>
+<merchandise>
+  <name>Walkway Poncho</name>
+  <price>$10</price>
+  <description>For use on a rainy day.</description>
+</merchandise>
+<merchandise>
+  <name>Walkway T-Shirt</name>
+  <price>$15</price>
+  <description>100% cotton T-Shirt with walkway logo.</description>
+</merchandise>
+<rental>
+  <name>Wheelchair</name>
+  <price>$15</price>
+  <description>For all day use of a wheelchair.</description>
+</rental>
+<rental>
+  <name>Stroller</name>
+  <price>$15</price>
+  <description>For all day use of a stroller.</description>
+</rental>
+</menu>

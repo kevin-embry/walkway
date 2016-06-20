@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Directions</title>
+    <link rel="stylesheet" href="directions.css" alt="Walkway Over The Hudson">
+</head>
+<body>
+<header>
+    <img id="headerimg" src="images/header.jpg">
+    <img id="header_right" src="images/header_grab.JPG">
+
+</header>
+
+
+<!--<div class="news">
+    <h1 style="display: inline">Latest News: </h1>
+    <h2 id="newsheader" style="display: inline"></h2>
+</div>-->
+<aside>
+    <h2>MENU</h2>
+    <nav id="nav_list">
+        <ul>
+            <li><a href="index.html">MAIN</a></li>
+            <li><a href="history.html">HISTORY</a></li>
+            <li><a href="photogallery.html">PHOTOS</a></li>
+            <li><a href="walkwayevents.html">EVENTS</a></li>
+            <li><a href="support.html">SUPPORT</a></li>
+            <li><a href="weather.html">WEATHER</a></li>
+        </ul>
+
+        <h2>VENDORS</h2>
+        <ul>
+            <li><a href="walkway-1.xml">FOOD</a></li>
+
+        </ul>
+
+        <h2>VISITING THE WALKWAY</h2>
+        <ul>
+            <li><a href="#">DIRECTIONS</a></li>
+            <li><a href="#" onclick="getHours()">HOURS</a></li>
+
+        </ul>
+    </nav>
+</aside>
+<main class="directions">
+    <h1>BRIDGE ADDRESS:</h1>
+    <h2>Poughkeepsie Approach:</h2>
+    <p>82 Washington St, <br/>Poughkeepsie, NY 12601</p><br/>
+    <h2>Highland Approach:</h2>
+    <p>87 Haviland Road<br/>Highland, NY 12528 </p><br/>
+    <div id="mapdiv"></div>
+
+
+</main>
+
+<footer>
+    <p style="padding-top: 0px">&copy;2015 Walkway Over The Hudson All Rights Reserved</p>
+    <img src="images/small_logo.jpg" name="botlogo" width="135px" height="70px">
+</footer>
+
+<script>
+
+   //initMap();
+
+    function initMap() {
+        var mapDiv = document.getElementById('mapdiv');
+        var map = new google.maps.Map(mapDiv, {
+        center: {lat: 41.710556, lng: -73.944444 },
+        zoom: 14
+        });
+    }
+
+   function getHours()
+   {
+       window.alert("Park Hours: Sunrise to Sunset.");
+   }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer></script>
+</body>
+</html>

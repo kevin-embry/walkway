@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Walkway Over The Hudson</title>
+    <link rel="stylesheet" href="walkway.css" alt="Walkway Over The Hudson">
+</head>
+<body>
+<header>
+    <img id="headerimg" src="images/header.jpg">
+    <img id="header_right" src="images/header_grab.JPG">
+
+</header>
+
+
+<div class="news">
+    <h1 style="display: inline">Latest News: </h1>
+    <h1 id="newsheader" style="display: inline"></h1>
+</div>
+<aside>
+    <h2>MENU</h2>
+    <nav id="nav_list">
+        <ul>
+		    <li><a href="#">MAIN</a></li>
+            <li><a href="history.html">HISTORY</a></li>
+            <li><a href="photogallery.html">PHOTOS</a></li>
+            <li><a href="walkwayevents.html">EVENTS</a></li>
+            <li><a href="support.html">SUPPORT</a></li>
+            <li><a href="weather.html">WEATHER</a></li>
+        </ul>
+   
+            <h2>VENDORS</h2>
+        <ul>
+            <li><a href="walkway-1.xml">FOOD</a></li>
+           
+        </ul>
+   
+            <h2>VISITING THE WALKWAY</h2>
+        <ul>
+            <li><a href="directions.html">DIRECTIONS</a></li>
+            <li><a href="#" onclick="getHours()">HOURS</a></li>
+           
+    
+        </ul>
+    </nav>
+</aside>
+<main>
+
+<div class="topleft">
+    
+        function swapImage()
+        {
+            document.slide.src = path[i];
+            if(i < path.length - 1) i++;
+            else i = 0;
+            setTimeout("swapImage()",3000);
+        }
+        window.onload=swapImage;
+    </script>-->
+    <img src="image_1.gif" name="slide" width="400px" height="300px"/>
+
+</div>
+
+<div class="topright">
+    <h1 style="padding: 10px">WALKWAY MISSION</h1>
+    <p style="padding: 0 25px; line-height: 1.4;">Through engaged stewardship and fundraising, we enhance the Walkway experience,
+        support capital improvements, and deliver innovative programs that attract visitors
+        and contribute to the economic vitality of the Hudson Valley.</p>
+
+</div>
+
+<div id="botleft"></div>
+
+<div class="botright">
+    <p style="font-size: 125%">Register for the 2016 Walkway Marathon!</p>
+    <a href="marathonform.html"><img src="images/walkwaymarathon.png" width="225px" style="padding: 50px"></a>
+</div>
+</main>
+
+<footer id="bottom">
+    <p style="padding-top: 0px">&copy;2015 Walkway Over The Hudson All Rights Reserved</p>
+    <img src="images/small_logo.jpg" name="botlogo" width="135px" height="70px"/>
+</footer>
+
+<script>
+
+        window.onload = swapImage;
+        window.onload = swapNews;
+		
+    var i = 0; var path = new Array();
+    
+    path[0] = "images/slideshow/image1.jpg";
+    path[1] = "images/slideshow/image2.jpg";
+    path[2] = "images/slideshow/image3.jpg";
+    path[3] = "images/slideshow/image4.jpg";
+    path[4] = "images/slideshow/image5.jpg";
+    path[5] = "images/slideshow/image6.jpg";
+    path[6] = "images/slideshow/image7.jpg";
+    path[7] = "images/slideshow/image8.jpg";
+    path[8] = "images/slideshow/image9.jpg";
+    path[9] = "images/slideshow/image11.jpg";
+
+    function swapImage()
+    {
+        document.slide.src = path[i];
+        if(i < path.length - 1) i++;
+        else i = 0;
+        setTimeout("swapImage()",4500);
+    }
+
+   window.onload=swapImage();
+
+    var j = 0; var news = new Array();
+
+    news[0] = "<a href = 'http://www.poughkeepsiejournal.com/story/sports/recreational/2016/04/18/run-walkway-marathon-already-staple-calendar/83193762/'>Walkway Marathon already a staple on calendar </a>";
+    news[1] = "<a href = 'http://www.poughkeepsiejournal.com/story/news/2016/04/08/best-views-mid-hudson-valley/82805088/'>Best views in the mid-Hudson Valley </a>";
+    news[2] = "<a href = http://www.poughkeepsiejournal.com/story/news/2016/04/08/35-million-walkway-park-improvements-planned/82721130/''>$3.5 million in Walkway park improvements planned</a>";
+    news[3] = "<a href = 'http://www.poughkeepsiejournal.com/story/news/local/new-york/2016/04/01/walkway-attendance-rose-last-year/82521616/'>Walkway attendance rose last year</a>";
+
+    function swapNews()
+    {
+            document.getElementById('newsheader').innerHTML = news[j];
+            if(j<news.length - 1) j++;
+            else j = 0;
+            setTimeout("swapNews()",5000);
+
+
+    }
+
+    window.onload=swapNews();
+
+
+
+
+    function initMap()
+    {
+      
+        {
+            var mapProp = {
+                center: new google.maps.LatLng(41.710556, -73.94444),
+                zoom:15,
+                mapTypeId: google.maps.MapTypeId.SATELLITE
+            };
+            var map = new google.maps.Map(document.getElementById("botleft"),mapProp);
+        }
+
+        function loadScript()
+        {
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "http://maps.googleapis.com/maps/api/js?key=&sensor=false&callback=initialize";
+            document.body.appendChild(script);
+        }
+
+
+
+
+    }
+
+        window.onload = loadScript;
+	
+function getHours()
+    {
+        window.alert("Park Hours: Sunrise to Sunset.");
+    }
+	
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer></script>
+
+</body>
+</html>
